@@ -1,0 +1,45 @@
+@import "./vars";
+@import "./reboot";
+@import "./functions";
+@import "./mixins";
+@import "./fonts";
+@import "swiper/swiper";
+@import "swiper/modules/grid/grid";
+@import "components/ui";
+@import "components/container";
+@import "components/header";
+@import "components/footer";
+@import "components/intro";
+@import "components/work";
+@import "components/questions";
+@import "components/examples";
+@import "components/tariffs";
+@import "components/question-answer";
+
+body{
+  font-size: $fontSize;
+  font-weight:400;
+  font-family: $fontFamily ;
+  color: $primary;
+  &.lock{
+    overflow-y: hidden;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  margin-top: 90px;
+  padding-top: 90px;
+  @include breakpoint($md-3, 0){
+    margin-top: 70px;
+    padding-top: 70px;
+  }
+  @include breakpoint($md-5, 0){
+    padding-top: 0;
+  }
+}

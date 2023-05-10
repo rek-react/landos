@@ -1,0 +1,13 @@
+@mixin breakpoint($br, $type) {
+  @if $type==0 {
+    @media (max-width: em($br)) {
+      @content;
+    }
+  }
+
+  @else if $type==1 {
+    @media (min-width: em($br)) {
+      @content;
+    }
+  }
+}

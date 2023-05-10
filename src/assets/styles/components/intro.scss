@@ -1,0 +1,185 @@
+.intro {
+  &__wrapper {
+    display: flex;
+    gap: 35px;
+    @include breakpoint($md-4, 0) {
+      gap: 20px;
+    }
+    @include breakpoint($md-5, 0) {
+      flex-direction: column;
+    }
+  }
+
+  &__body {
+    flex: 1 1 auto;
+
+  }
+
+  &__image {
+    align-self: flex-start;
+    @include breakpoint(660, 0) {
+      display: none;
+    }
+  }
+
+  &__video {
+    margin-top: 140px;
+    @include breakpoint($md-3, 0) {
+      margin-top: 90px;
+    }
+    @include breakpoint($md-4, 0) {
+      margin-top: 60px;
+    }
+  }
+
+  &__content {
+  }
+}
+
+.content-intro {
+  position: relative;
+  @include breakpoint($md-5, 0) {
+    min-height: 630px;
+  }
+
+  &__image {
+    display: none;
+    @include breakpoint($md-5, 0) {
+      display: block;
+    }
+  }
+
+  &__body {
+    @include breakpoint($md-5, 0) {
+      padding: 75px 40px 0;
+      position: relative;
+      z-index: 3;
+    }
+    @include breakpoint(390, 0) {
+      padding: 75px 35px 0;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    text-align: left;
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 60px;
+    }
+
+    @include breakpoint($md-3, 0) {
+      span {
+        font-size: 50px;
+      }
+    }
+    @include breakpoint($md-5, 0) {
+      span {
+        font-size: 38px;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+    color: #475569;
+    font-size: 18px;
+    line-height: calc((26 / 18) * 100%);
+    @include breakpoint($md-3, 0) {
+      margin-top: 15px;
+    }
+  }
+
+  &__buttons {
+    margin-top: 65px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 35px;
+    row-gap: 20px;
+    @include breakpoint($md-3, 0) {
+      margin-top: 40px;
+    }
+    @include breakpoint($md-5, 0) {
+      margin-top: 20px;
+    }
+
+  }
+
+  &__button {
+
+  }
+}
+
+.video-intro {
+  &__title {
+    font-size: 50px;
+    line-height: calc((55 / 50) * 100%);
+    margin-bottom: 45px;
+    @include breakpoint($md-3, 0) {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint($md-5, 0) {
+      font-size: 28px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    padding-bottom: 48%;
+    @include breakpoint(660, 0) {
+      padding-bottom: 55%;
+    }
+    iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+.image-intro {
+  position: relative;
+  padding-bottom: 65%;
+  width: 100%;
+  max-width: 350px;
+  @include breakpoint(660, 0) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  &__main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__secondary {
+    position: absolute;
+    left: 50%;
+    width: 70%;
+    height: 30%;
+    z-index: 2;
+    @include breakpoint($md-5, 1) {
+      transform: translate(-50%, -50%);
+      top: 50%;
+    }
+    @include breakpoint($md-5, 0) {
+      transform: translate(-50%, 0);
+      width: 60%;
+      height: 25%;
+      bottom: 30px;
+    }
+  }
+}

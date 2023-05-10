@@ -1,0 +1,48 @@
+.button{
+  height: 45px;
+  padding: 0 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  @include breakpoint($md-5, 0){
+    padding: 0 15px;
+    column-gap: 10px;
+    font-size: 14px;
+  }
+  &-blue{
+    font-size: 14px;
+    background-color:$secondary ;
+    color: #ffffff;
+  }
+  &-border{
+    color: $secondary !important;
+    border: 1px solid $secondary;
+  }
+  &-yellow{
+    color: $primary;
+    background-color: #F7CE46;
+  }
+  &-without{
+    color: $secondary;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+.title{
+  font-size: 52px;
+  font-weight: 600;
+  line-height: calc((62 / 52) * 100%);
+  @include breakpoint($md-5, 1) {
+    text-align: center;
+  }
+
+  @include breakpoint($md-3, 0) {
+    font-size: 40px;
+  }
+  @include breakpoint($md-5, 0) {
+    font-size: 28px;
+  }
+}

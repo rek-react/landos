@@ -1,0 +1,74 @@
+.footer{
+  background-color: #E0E0E0;
+  margin-top: 62px;
+  @include breakpoint($md-4,0){
+    margin-top: 40px;
+  }
+  &__body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    @include breakpoint($md-1,0){
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    @include breakpoint($md-2,0){
+      flex-direction: column;
+      gap: 25px;
+      align-items: flex-start;
+
+    }
+  }
+  &__copyright{
+    color: #969696;
+    font-size: 15px;
+    font-family: "Roboto Light";
+  }
+
+}
+.social-footer{
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  @include breakpoint($md-1,0){
+    gap: 30px;
+  }
+  @include breakpoint($md-5,0){
+    gap: 20px;
+  }
+  &__logo{
+    width: 92px;
+    height: 65px;
+    background-color: #4B4B4B;
+  }
+  &__icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}
+.menu-footer{
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    @include breakpoint($md-1,0){
+      gap: 30px;
+    }
+    @include breakpoint($md-5,0){
+      gap: 20px;
+    }
+  }
+  &__link{
+    color: #000000;
+    @media (any-hover: hover) {
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

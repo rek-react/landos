@@ -1,0 +1,72 @@
+.tariffs{
+  padding: 63px 0 70px;
+  margin-top: 75px;
+  background: url("../images/tariffs/bg.png") 0 0  #010101 no-repeat;
+  @include breakpoint($md-3, 0){
+    padding: 45px 0 50px;
+  }
+  @include breakpoint($md-5, 0){
+    padding: 20px 0 50px;
+  }
+  &__title{
+    margin-bottom: 66px;
+    color:#ffffff;
+    @include breakpoint($md-4, 0) {
+      margin-bottom: 30px;
+    }
+  }
+  &__items{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+    column-gap: 20px;
+    row-gap:30px ;
+  }
+  &__button{
+    display: flex;
+    justify-content: center;
+    margin-top: 55px;
+    @include breakpoint($md-3, 0){
+      margin-top: 40px;
+    }
+  }
+}
+.item-tariffs{
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding:32px 28px 40px;
+  text-align: center;
+  color: #090A0A;
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($md-4, 0) {
+    padding:32px 25px;
+  }
+  &__fame{
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  &__accommodation{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc((24 / 18) * 100%);
+    margin-bottom: 12px;
+  }
+  &__price{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: calc((56 / 48) * 100%);
+    margin-bottom: 12px;
+    @include breakpoint($md-5, 0) {
+      font-size: 45px;
+    }
+  }
+  &__one-time{
+    flex: 1 1 auto;
+    font-size: 12px;
+  }
+  &__button{
+    border-radius: 48px;
+    margin-top: 44px;
+  }
+}
